@@ -135,17 +135,18 @@ select title from items, orders where items.id = orders.item_id order by quantit
 +-----------------------+
 
 2.  - `SQL:`
-select first_name, last_name from users, orders, items  where users.id = orders.user_id and items.id = orders.item_id order by (price*quantity) DESC limit 1
+select first_name, last_name from users, orders, items  where users.id = orders.user_id and items.id = orders.item_id order by (price*quantity) DESC limit 2
 
   - `ANSWER:`
 
   +--------------+-------------+
-| first_name   | last_name   |
-|--------------+-------------|
-| Jasmine      | Frantz      |
-+--------------+-------------+
+  | first_name   | last_name   |
+  |--------------+-------------|
+  | Jasmine      | Frantz      |
+  | Missouri     | Carroll     |
+  +--------------+-------------+
 
-## ooops if the answer is correct, it happens to be me!
+## ooops if the answer is correct, it happens to be me! create.sql doesn't seem like it's updated on github. With older list, the answer would be 'Missouri Carroll'
 
 3. - `SQL:`
  select sum(price*quantity) as automotive from items, orders where items.id = orders.item_id and category like 'Automotive%'
