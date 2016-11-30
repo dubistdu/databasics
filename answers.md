@@ -122,6 +122,77 @@ select sum(price * quantity) from orders, items where  orders.item_id = items.id
 |    1 |       123 |       100 |         12 | <null>                     |
 +------+-----------+-----------+------------+----------------------------+
 
+
+++++ Adventure Mode +++++
+
+1.  - `SQL:`
+select title from items, orders where items.id = orders.item_id order by quantity DESC limit 1
+  - `ANSWER:`
+  +-----------------------+
+| title                 |
+|-----------------------|
+| Awesome Granite Pants |
++-----------------------+
+
+2.  - `SQL:`
+select first_name, last_name from users, orders, items  where users.id = orders.user_id and items.id = orders.item_id order by (price*quantity) DESC limit 1
+
+  - `ANSWER:`
+
+  +--------------+-------------+
+| first_name   | last_name   |
+|--------------+-------------|
+| Jasmine      | Frantz      |
++--------------+-------------+
+
+## ooops if the answer is correct, it happens to be me!
+
+3. - `SQL:`
+ select sum(price*quantity) as automotive from items, orders where items.id = orders.item_id and category like 'Automotive%'
+
+ +--------------+
+|   automotive |
+|--------------|
+|       170684 |
++--------------+
+
+select sum(price*quantity) as baby from items, orders where items.id = orders.item_id and category like 'baby%'
+
+select sum(price*quantity) as books from items, orders where items.id = orders.item_id and category like 'Books%'
+
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Beauty%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Clothing%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Computers%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Electronics%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Games%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Garden%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Grocery%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Health%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Home%'
+
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Industrial%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Jewelery%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Kids%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Movie%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Music%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Outdoors%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Kids%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Kids%'
+select sum(price*quantity) as beauty from items, orders where items.id = orders.item_id and category like 'Kids%'
+
+
+
+- `ANSWER:`
+
 # in a relation to 5...
 select addresses.id, city, state, zip from users, addresses where users.id = addresses.user_id and first_name ='Virginie' and last_name = 'Mitchell'
 
